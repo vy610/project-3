@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="myStore.css">
+    <meta charset="UTF-8">
+    <title>Online Store</title>
+</head>
+<body>
+    <h1>Tenant</h1>
+    <form id = "tenantRequest">
+        <div class = "tenantInformation">
+            <h3>Name: </h3>
+            <input type = "text" id = "tenantName"/>
+            <h3>Id:</h3>
+            <input type = "text" id = "tenantId"/>
+            <h3>Apartment Id:</h3>
+            <input type = "text" id = "apartmentId"/>
+            <h3>Problem description: </h3>
+            <input type = "text" id = "problemDescription"/>
+            <h3>Photo (optional): </h3>
+            <input type = "text" id = "optionalPhoto">
+            <h3> </h3>
+            <input type="submit" value="Submit" />
+            <div id="errorDiv" style="display: none;">Tenant ID and/or Apartment ID do not match.</div>
+        </div>
+
+
+        <h1>Maintenance Staff</h1>
+        <div class="filter">
+            <h3>Filters: </h3>
+            <button id="filterCompleted">Filter Completed</button>
+            <button id="filterPending">Filter Pending</button>
+        </div>
+        <form id="Maintenance">
+            <div class="maintenanceInformation">
+                <div id="maintenanceInfo"></div>
+            </div>
+        </form>
+
+        <h1>Manager</h1>
+        <form id="Manager">
+            <h4>Type in tenant id to delete account: </h4>
+            <input type="text" id="deleteWithId" />
+            <input type="submit" value="Delete Tenant" />
+
+            <h4>Type in tenant id and new apartment number: </h4>
+            <input type="text" id="changeApartmentWithId" />
+            <input type="text" id="newApartmentId" placeholder="New Apartment Number" />
+            <input type="submit" value="Change Apartment" />
+
+            <h4>Add tenant: </h4>
+            <h4>Name: </h4>
+            <input type="text" id="addName" />
+            <h4>Phone number: </h4>
+            <input type="text" id="addPhoneNumber" />
+            <h4>Email: </h4>
+            <input type="text" id="addEmail" />
+            <h4>Apartment: </h4>
+            <input type="text" id="addApartment" />
+            <h4>Check in: </h4>
+            <input type="text" id="addCheckIn" />
+            <h4>Checkout: </h4>
+            <input type="text" id="addCheckout" />
+            <input type="submit" value="addInfo" />
+
+            <div id="tenantInfo"></div>
+        </form>
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script type="module" src="myStore.js"></script>
+</body>
+</html>
+
